@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever With You 💞</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family:'Poppins',sans-serif;
+color:white;
+text-align:center;
+padding:40px;
+overflow:hidden;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:65px;
+margin-bottom:25px;
+text-shadow:0 0 20px white;
+animation:fadeIn 2s ease-in-out;
+}
+
+p{
+max-width:800px;
+font-size:22px;
+line-height:1.8;
+margin-bottom:40px;
+animation:fadeIn 3s ease-in-out;
+}
+
+#timer{
+font-size:26px;
+background:rgba(255,255,255,0.2);
+padding:25px 50px;
+border-radius:25px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 40px rgba(255,255,255,0.5);
+animation:fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<h1>From That Beautiful Moment 💖</h1>
+
+<p>
+From the exact second our paths crossed on July 6, 2022 at 4:33 PM,  
+my life quietly changed in the most magical way.  
+
+Every smile, every laugh, every tiny memory with you  
+has been adding colors to my world.  
+
+Time isn’t just passing…  
+it’s building our story, second by second.  
+And I’m grateful for every heartbeat that connects me to you. 💞
+</p>
+
+<div id="timer"></div>
+
+<script>
+
+// ✅ Correct Date (July 6, 2022 4:33 PM - Local Time)
+let startDate = new Date("2022-07-06T16:33:00");
+
+function updateTimer(){
+let now = new Date();
+let diff = now - startDate;
+
+let days = Math.floor(diff / (1000*60*60*24));
+let hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+let minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+let seconds = Math.floor((diff % (1000*60)) / 1000);
+
+document.getElementById("timer").innerHTML =
+days + " Days 💕 " +
+hours + " Hours 💕 " +
+minutes + " Minutes 💕 " +
+seconds + " Seconds 💕<br><br>" +
+"of loving you endlessly ❤️";
+}
+
+updateTimer();
+setInterval(updateTimer,1000);
+
+</script>
+
+</body>
+</html>
