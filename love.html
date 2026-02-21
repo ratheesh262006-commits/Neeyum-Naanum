@@ -5,10 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forever With You 💞</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 min-height:100vh;
@@ -20,8 +24,15 @@ background:linear-gradient(135deg,#ff758c,#ff7eb3);
 font-family:'Poppins',sans-serif;
 color:white;
 text-align:center;
-padding:40px;
-overflow:hidden;
+padding:40px 20px;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+.container{
+max-width:900px;
+width:100%;
+animation:fadeIn 2s ease-in-out;
 }
 
 h1{
@@ -29,15 +40,12 @@ font-family:'Great Vibes',cursive;
 font-size:65px;
 margin-bottom:25px;
 text-shadow:0 0 20px white;
-animation:fadeIn 2s ease-in-out;
 }
 
 p{
-max-width:800px;
 font-size:22px;
 line-height:1.8;
 margin-bottom:40px;
-animation:fadeIn 3s ease-in-out;
 }
 
 #timer{
@@ -47,16 +55,35 @@ padding:25px 50px;
 border-radius:25px;
 backdrop-filter:blur(15px);
 box-shadow:0 0 40px rgba(255,255,255,0.5);
-animation:fadeIn 4s ease-in-out;
 }
 
 @keyframes fadeIn{
 from{opacity:0;transform:translateY(20px);}
 to{opacity:1;transform:translateY(0);}
 }
+
+/* ❤️ Mobile Responsive */
+@media (max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+p{
+font-size:18px;
+}
+
+#timer{
+font-size:20px;
+padding:20px;
+}
+
+}
 </style>
 </head>
 <body>
+
+<div class="container">
 
 <h1>From That Beautiful Moment 💖</h1>
 
@@ -74,9 +101,11 @@ And I’m grateful for every heartbeat that connects me to you. 💞
 
 <div id="timer"></div>
 
+</div>
+
 <script>
 
-// ✅ Correct Date (July 6, 2022 4:33 PM - Local Time)
+// Love start date
 let startDate = new Date("2022-07-06T16:33:00");
 
 function updateTimer(){
